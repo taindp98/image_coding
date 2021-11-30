@@ -27,7 +27,7 @@ function []=display_videos(vid1, vid2, vid3, vid4)
             if i1 < v1.NumFrames
                 i1 = i1+1;
                 if ishandle(ax1)
-                  image(ax1, v1.read(i1));
+                  image(ax1, rot90(v1.read(i1),1));
                 else
                   break;    %axes is gone, figure is probably gone too
                 end
@@ -35,7 +35,7 @@ function []=display_videos(vid1, vid2, vid3, vid4)
             if i2 < v2.NumFrames
                 i2 = i2+1;
                 if ishandle(ax2)
-                  image(ax2, v2.read(i2));
+                  image(ax2, rot90(v2.read(i2),1));
                 else
                   break;    %axes is gone, figure is probably gone too
                 end
@@ -43,7 +43,7 @@ function []=display_videos(vid1, vid2, vid3, vid4)
             if i3 < v3.NumFrames
                 i3 = i3+1;
                 if ishandle(ax3)
-                  image(ax3, v3.read(i3));
+                  image(ax3, rot90(v3.read(i3),1));
                 else
                   break;    %axes is gone, figure is probably gone too
                 end
@@ -51,7 +51,7 @@ function []=display_videos(vid1, vid2, vid3, vid4)
             if i4 < v4.NumFrames
                 i4 = i4+1;
                 if ishandle(ax4)
-                  image(ax4, v4.read(i4));
+                  image(ax4, rot90(v4.read(i4),1));
                 else
                   break;    %axes is gone, figure is probably gone too
                 end
